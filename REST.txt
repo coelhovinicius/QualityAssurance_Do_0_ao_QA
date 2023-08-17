@@ -1,0 +1,99 @@
+REST
+
+REST é um acrônimo para Representational State Transfer. É um estilo de arquitetura para sistemas distribuídos que usa o protocolo HTTP para comunicar entre clientes e servidores.
+
+REST é baseado em alguns princípios principais:
+
+Cliente-servidor: O cliente e o servidor são componentes independentes que se comunicam entre si por meio de solicitações e respostas HTTP.
+Estadoless: O servidor não mantém nenhum estado sobre o cliente. Cada solicitação é tratada como independente.
+Cacheável: As respostas HTTP podem ser armazenadas em cache pelo cliente para melhorar o desempenho.
+Uniform interface: Todos os recursos no sistema devem ser acessados ​​por meio de uma interface uniforme. Isso significa que todos os recursos devem usar o mesmo formato de solicitação e resposta.
+Hypermedia: O cliente deve ser capaz de navegar pelo sistema usando hipermídia. Isso significa que o cliente deve ser capaz de seguir links para outros recursos no sistema.
+REST é um estilo de arquitetura poderoso e flexível que pode ser usado para criar sistemas distribuídos escaláveis e eficientes. É amplamente utilizado em aplicativos da web e serviços da web.
+
+Aqui estão alguns benefícios de usar REST:
+
+Escalabilidade: REST é escalável porque é baseado em uma arquitetura cliente-servidor. Os clientes podem ser facilmente escalados horizontalmente para lidar com um maior número de usuários.
+Eficiência: REST é eficiente porque usa o protocolo HTTP, que é um protocolo bem conhecido e amplamente implementado.
+Flexibilidade: REST é flexível porque pode ser usado para criar uma variedade de sistemas distribuídos.
+Reusabilidade: REST é reutilizável porque as APIs REST são baseadas em uma interface uniforme. Isso significa que as APIs REST podem ser facilmente reutilizadas em outros sistemas.
+Segurança: REST é seguro porque usa o protocolo HTTP, que é um protocolo seguro.
+REST é um estilo de arquitetura poderoso e flexível que pode ser usado para criar sistemas distribuídos escaláveis, eficientes, flexíveis, reutilizáveis ​​e seguros.
+
+Aqui estão alguns exemplos de scripts REST:
+
+Obter um recurso: Este script usa o método GET para obter um recurso do servidor.
+
+function getProduct(id) {
+  // Fazer uma solicitação HTTP para o recurso do produto com o ID especificado.
+  const response = await fetch(`/products/${id}`);
+
+  // Verificar se a solicitação foi bem-sucedida.
+  if (!response.ok) {
+    throw new Error(`Erro ao obter o produto: ${response.status}`);
+  }
+
+  // Decodificar a resposta como um objeto JSON.
+  const product = await response.json();
+
+  // Retornar o produto.
+  return product;
+}
+Criar um recurso: Este script usa o método POST para criar um recurso no servidor.
+function createProduct(product) {
+  // Fazer uma solicitação HTTP para o recurso do produto.
+  const response = await fetch('/products', {
+    method: 'POST',
+    body: JSON.stringify(product),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
+  // Verificar se a solicitação foi bem-sucedida.
+  if (!response.ok) {
+    throw new Error(`Erro ao criar o produto: ${response.status}`);
+  }
+
+  // Retornar o recurso criado.
+  return await response.json();
+}
+
+Atualizar um recurso: Este script usa o método PUT para atualizar um recurso no servidor.
+
+function updateProduct(product) {
+  // Fazer uma solicitação HTTP para o recurso do produto.
+  const response = await fetch(`/products/${product.id}`, {
+    method: 'PUT',
+    body: JSON.stringify(product),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
+  // Verificar se a solicitação foi bem-sucedida.
+  if (!response.ok) {
+    throw new Error(`Erro ao atualizar o produto: ${response.status}`);
+  }
+
+  // Retornar o recurso atualizado.
+  return await response.json();
+}
+
+Excluir um recurso: Este script usa o método DELETE para excluir um recurso do servidor.
+
+function deleteProduct(id) {
+  // Fazer uma solicitação HTTP para o recurso do produto.
+  const response = await fetch(`/products/${id}`, {
+    method: 'DELETE',
+  });
+
+  // Verificar se a solicitação foi bem-sucedida.
+  if (!response.ok) {
+    throw new Error(`Erro ao excluir o produto: ${response.status}`);
+  }
+}
+
+Estes são apenas alguns exemplos de scripts REST. Existem muitos outros scripts que podem ser usados para interagir com recursos REST.
+
+Maiores informações em https://www.alura.com.br/artigos/rest-principios-e-boas-praticas.

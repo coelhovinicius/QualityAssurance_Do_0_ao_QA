@@ -1,0 +1,59 @@
+Mapeamento de Casos de Testes
+
+- Sempre devemos escrever os Casos de Testes;
+- Após a escrita, validação e execução dos testes, caso os testes não venham a ser alterados por um grande período de tempo, deixar os casos VISÍVEIS A TODOS e atualizados;
+- Explore os caminhos alternativos - a maioria dos bugs ocorrem nos testes alternativos.
+- Utilize outros softwares como referência para os testes.
+
+Devemos começar a escrever os casos de testes assim que o escopo e os critérios de aceite dos clientes do projeto/produto forem definidos pela área de Produtos. 
+
+Cenário: O que de fato será testado na funcionalidade.
+Step: Ações que serão executadas para a realização dos testes.
+Resultado Esperado: O que é esperado de Retorno Ideal como resultado dos testes.
+
+Exemplo - Tela de Login do Google:
+
+Cenário 1: Logar com sucesso;
+Step: Digitar um e-mail válido, digitar uma senha válida e clicar em Logar;
+Resultado Esperado: Logar com sucesso.
+
+Cenário 2: Criar uma conta
+Step: Clicar no link "Criar Conta", digitar as informações pessoais válidas e clicar no botão "Finalizar";
+Resultado Esperado: A conta deverá ser criada com sucesso.
+
+Cenário 3: Tentar logar com e-mail ou senha inválida;
+Step: Digitar um e-mail ou senha inválida;
+Resultado Esperado: Mensagem de erro informando "E-mail ou senha inválida".
+
+Cenário 4: Tentar logar com um e-mail diferente do Gmail;
+Step: Digitar um e-mail que não é Gmail, digitar uma senha e clicar em "Logar";
+Resultado Esperado: Mensagem de erro informando que o usuário precisa de uma conta Gmail para acesso.
+
+Cenário 5: Logar em dispositivos móveis;
+Step: Digitar um e-mail válido, digitar uma senha válida e clidar em "Logar";
+Resultado Esperado: Logar com sucesso.
+
+Cenário 6: Tentar logar sem digitar um e-mail ou senha;
+Step: Deixar os campos e-mail e senha vazios e clicar no botão Logar;
+Resultado Esperado: Mensagem de erro informando que o usuário deve digitar um e-mail ou senha.
+
+Cenário 7: Tentar logar sem conexão com a Internet;
+Step: Cortar a conexão com a Internet e tentar logar;
+Resultado Esperado: Mensagem de erro informando que o usuário está sem acesso à Internet.
+
+Cenário 8: Logar utilizando rede 3G;
+Step: Ligar conexão 3G, digitar as credenciais válidas e clicar em "Logar";
+Resultado Esperado: Logar com sucesso.
+
+Cenário 9: Errar a senha mais de 5 vezes;
+Step: Digitar e-mail válido, digitar em "Logar" (repetir mais de 5 vezes);
+Resultado Esperado: Conta deve ser bloqueada por um período e deve aparecer uma mensagem informativa.
+
+Outra maneira de escrever os Casos de Testes:
+
+Cenário 1: Logar com sucesso;
+Step01: Digitar um e-mail válido;
+Step02: Digitar uma senha válida;
+Step03: Clicar no botão Logar;
+Resultado Esperado: Logar com sucesso.
+

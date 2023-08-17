@@ -1,0 +1,72 @@
+HATEOAS (Hypermedia as the Engine of Application State) é uma abordagem de design para sistemas de hipermídia que permite aos clientes navegar e interagir com um sistema sem a necessidade de conhecimento prévio do estado interno do sistema. Isso é feito fornecendo ao cliente links para outros recursos no sistema, que podem ser usados para navegar para novos recursos ou atualizar o estado do sistema.
+
+HATEOAS
+
+O HATEOAS é uma abordagem poderosa para o design de sistemas de hipermídia, pois pode facilitar o desenvolvimento de sistemas escaláveis e flexíveis. Também pode tornar mais fácil para os clientes aprenderem e usar novos sistemas, pois não precisam saber o estado interno do sistema para interagir com ele.
+
+Aqui estão alguns exemplos práticos de HATEOAS:
+
+Um sistema de comércio eletrônico pode fornecer ao cliente links para produtos relacionados, avaliações de produtos e páginas de checkout.
+Um sistema de gerenciamento de projetos pode fornecer ao cliente links para tarefas relacionadas, membros da equipe e arquivos do projeto.
+Um sistema de gerenciamento de conteúdo pode fornecer ao cliente links para páginas relacionadas, categorias e tags.
+Em cada um desses exemplos, os links são usados para permitir que os clientes naveguem e interajam com o sistema sem a necessidade de conhecimento prévio do estado interno do sistema. Isso torna os sistemas mais escaláveis, flexíveis e fáceis de usar.
+
+Aqui está um exemplo de script usando HATEOAS:
+
+// Função
+function getProduct(id) {
+  // Fazer uma solicitação HTTP para o recurso do produto com o ID especificado.
+  const response = await fetch(`/products/${id}`);
+
+  // Verificar se a solicitação foi bem-sucedida.
+  if (!response.ok) {
+    throw new Error(`Erro ao obter o produto: ${response.status}`);
+  }
+
+  // Decodificar a resposta como um objeto JSON.
+  const product = await response.json();
+
+  // Retornar o produto.
+  return product;
+}
+
+function addToCart(productId) {
+  // Fazer uma solicitação HTTP para o recurso do carrinho de compras.
+  const response = await fetch('/cart');
+
+  // Verificar se a solicitação foi bem-sucedida.
+  if (!response.ok) {
+    throw new Error(`Erro ao adicionar o produto ao carrinho: ${response.status}`);
+  }
+
+  // Criar um novo objeto de link para o recurso do produto.
+  const link = {
+    rel: 'product',
+     href: `/products/${productId}`,
+  };
+
+  // Adicionar o link ao corpo da resposta.
+  response.headers.set('Link', link.toLinkHeader());
+
+  // Retornar a resposta.
+  return response;
+}
+
+function checkout() {
+  // Fazer uma solicitação HTTP para o recurso de checkout.
+  const response = await fetch('/checkout');
+
+  // Verificar se a solicitação foi bem-sucedida.
+  if (!response.ok) {
+    throw new Error(`Erro no check-out: ${response.status}`);
+  }
+
+  // Retornar a resposta.
+  return response;
+}
+
+Este script usa HATEOAS para permitir que os clientes naveguem e interajam com um sistema de comércio eletrônico sem a necessidade de conhecer o estado interno do sistema. O script fornece links para recursos relacionados, como produtos, carrinhos de compras e páginas de checkout. Esses links podem ser usados pelos clientes para navegar para novos recursos ou atualizar o estado do sistema.
+
+Por exemplo, se um cliente quiser adicionar um produto ao carrinho de compras, ele pode chamar a função addToCart e passar o ID do produto. A função addToCart fará uma solicitação HTTP para o recurso do carrinho de compras e adicionará um link para o recurso do produto ao corpo da resposta. O cliente pode então usar esse link para navegar para o recurso do produto.
+
+O uso de HATEOAS torna os sistemas mais escaláveis, flexíveis e fáceis de usar. Os sistemas escaláveis podem ser facilmente ampliados para lidar com um maior número de usuários. Os sistemas flexíveis podem ser facilmente adaptados para atender às mudanças nas necessidades dos usuários. Os sistemas fáceis de usar podem ser facilmente aprendidos e usados por novos usuários.

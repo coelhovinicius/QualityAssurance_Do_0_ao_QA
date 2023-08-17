@@ -1,0 +1,13 @@
+https://localhost:44309/Sellers
+
+https://dummy.restapiexample.com/api/v1/employees
+https://dummy.restapiexample.com/employees
+	
+http://fakerestapi.azurewebsites.net/api/v1/Activities 
+
+{
+    "id": 256,
+    "title": "Testando POST 2",
+    "dueDate": "2023-08-17T19:44:38.5444479+00:00",
+    "completed": true
+}

@@ -1,0 +1,47 @@
+Do 0 ao QA - Canal QAlizando
+
+Times Ágeis - Processos Ágeis, Metodologias Ágeis.
+
+Site gerador de dados pessoais para devs: 4devs.com.br
+
+Testes de Front End:
+- Teste de Fluxo Principal - testa o que é desejado que a feature faça, conforme a finalidade para qual ela foi idealizada.
+- Verificar se há anomalias;
+- Bug de UI (User Interface) - Por exemplo, quando o texto do card de um produto numa busca passa por cima do card de outro produto;
+- Teste de Fluxo Alternativo - testa os demais fluxos;
+- Limpar cache de browser: Inspecionar - Applications - Clear Site Data;
+- Teste de emular Layout Responsivo (para mobile): Inspecionar - Toggle Device Toolbar;
+- Testar - Reportar Bugs - Retestar;
+
+Testes Funcionais: Teste das funcionalidades, regras de negócio, como um usuário interagiria com o front end.
+
+- Fazer testes em múltiplos browsers;
+- Atentar-se às regras de negócios;
+- Retestar as funcionalidades a cada resolução de bugs;
+- Limpar cache do browser;
+
+Verbos HTTP:
+Os verbos do HTTP são uma parte importante do protocolo de transferência hipermídia (HTTP). Eles são usados para especificar o que o cliente deseja fazer com o servidor. Existem oito verbos HTTP:
+
+GET: Obtém um recurso do servidor.
+POST: Envia dados ao servidor para criar um novo recurso.
+PUT: Atualiza um recurso existente no servidor, atualizando TODAS as informações obrigatoriamente.
+PATCH: Atualiza um recurso existente no servidor, atualizando APENAS o campo que foi alterado.
+DELETE: Exclui um recurso do servidor.
+
+HEAD: Obtém uma versão sem corpo do recurso.
+CONNECT: Estabelece uma conexão entre dois pontos finais.
+OPTIONS: Obtém as opções disponíveis para um recurso.
+TRACE: Envia o pedido de volta ao cliente.
+Cada verbo tem seu próprio significado e uso específico. É importante usar o verbo correto para a tarefa que você está tentando realizar. Por exemplo, você deve usar o verbo GET para obter um recurso do servidor, o verbo POST para enviar dados para o servidor, o verbo PUT para atualizar um recurso existente e o verbo DELETE para excluir um recurso.
+
+Os verbos HTTP são uma parte essencial do protocolo HTTP e são usados para garantir que as solicitações e respostas sejam enviadas e recebidas corretamente entre clientes e servidores.
+
+Testes de Back End com Postman:
+- Baixar Postman;
+- Links para testes: http://fakerestapi.azurewebsites.net/api/v1/Activities ou https://dummy.restapiexample.com/api/v1/employees;
+- Códigos de status HTTP: https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
+
+Alura: https://www.alura.com.br/artigos/postman-como-instalar-dar-seus-primeiros-passos
+
+
