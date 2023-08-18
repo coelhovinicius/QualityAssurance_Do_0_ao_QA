@@ -1,0 +1,37 @@
+Metodologia Ágil
+
+- Menor burocracia;
+- Entrega de valor constante;
+- Adaptação a mudanças;
+- Cliente com maior envolvimento com o projeto;
+- Gerenciamento de riscos;
+- Software "fatiado", trazendo maior qualidade.
+
+Frameworks - Scrum e Kanban
+Em comum:
+- Board Kanban;
+- Cerimônias - vários tipos.
+
+Scrum:
+- Scrum possui timebox - sprints;
+- Uma sprint começa depois que outra acaba;
+- Scrum master - Agile Master focado no framework Scrum.
+
+Kanban:
+- Trabalho contínuo;
+- Tarefas por grau de importância;
+- Ideal finalizar uma tarefa para iniciar outra;
+- Deixar o mais granular possível as tarefas;
+- Gerenciamento correto do Backlog.
+
+Cerimônias:
+- Daily Meeting: Máximo de 15 minutos; Refinamento do processo; Criação do Backlog;
+- Planning: Consenso da complexidade do desenvolvimento de ponta-a-ponta;
+- Review: Apresenta protótipos, demos do produto para as áreas envolvidas;
+- Retrospect: O que deu certo, o que deu errado e tomadas de ações.
+
+QA Ágil:
+- QA envolvido do início ao fim do projeto;
+- Participa desde a concepção até a produção do produto;
+- TDD - Test Driven Development;
+- Levantamento e Escrita dos testes antes do início do desenvolvimento do produto.

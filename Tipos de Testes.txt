@@ -1,0 +1,40 @@
+Tipos de Testes
+
+Caixa-Branca - Acesso ao código do software
+Caixa-Preta - Sem acesso aos códigos
+
+Teste Funcional - Teste de Caixa-Preta
+- Aplicado pelos QA, normalmente;
+- Validação de critérios de aceite;
+- Valida as funcionalidades do produto;
+- Pode ser de forma manual ou automatizada.
+
+Teste Unitário - Caixa-Branca
+- Aplicado normalmente pelos desenvolvedores;
+- Validação de entrada e saída de dados.
+
+Teste de Componente / Instrumentado / UI
+- Procurar bugs e melhorar o código.
+
+Teste Integrado - Híbrido de Caixa-Branca e Caixa-Preta
+- Aplicado tanto pelos Devs quanto pelos QA;
+- Verifica se as funcionalidades estão funcionando corretamente, quando integradas;
+- Testar todas as funcionalidades do produto juntas.
+
+Testes de Regressão - Caixa Preta ou Branca
+- Retestar tudo o que já foi testado anteriormente;
+- Utilizado, geralmente, quando são agregadas novas funcionalidades a produto.
+
+Teste de Carga e Teste de Stress
+- Validação da performance do produto quando de uma utilização extrema do mesmo;
+- Verificar a utilização do produto com muitos usuários ao mesmo tempo.
+
+Teste de Usabilidade
+- Normalmente, aplicado pela equipe do PO e equipe de UX;
+- Visa melhorar a usabilidade do aplicativo pelo usuário final.
+
+Aplicações dos testes:
+1 - Testes Unitários: os que deve ser mais aplicado;
+2- Testes de Integração: o segundo teste que deve ser mais aplicado;
+3 - Testes Funcionais: testes que devem ser utilizados com mais parcimônia, não pode tomar muito tempo nos testes.
+Obs.: Quanto menos testes manuais, melhor a entrega de valor para o cliente.
